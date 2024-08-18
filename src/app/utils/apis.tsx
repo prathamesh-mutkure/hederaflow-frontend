@@ -1,7 +1,7 @@
 // axiosInstance.ts
 import axios from "axios";
 
-const API_URL = "https://auto-stellar-backend.onrender.com";
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
