@@ -22,21 +22,21 @@ export const dashboardConfig: DashboardConfig = {
       href: "/organization-users",
       icon: "home",
     },
-    // {
-    //   title: "Add New Employee",
-    //   href: "/add-users",
-    //   icon: "home",
-    // },
+    {
+      title: "Add Employee",
+      href: "/add-users",
+      icon: "home",
+    },
     {
       title: "All Payroll",
       href: "/organization-payroll-list",
       icon: "home",
     },
-    // {
-    //   title: "Create Payroll",
-    //   href: "/organization-payroll",
-    //   icon: "home",
-    // },
+    {
+      title: "Create Payroll",
+      href: "/organization-payroll",
+      icon: "home",
+    },
     {
       title: "Payroll Invoices",
       href: "/organization-payment-history",

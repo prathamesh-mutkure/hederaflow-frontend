@@ -82,7 +82,7 @@ export default function DashboardLayout({
                   : dashboardConfig.adminSidebarNav
             }
           />
-          {type !== "none" && type !== "empty" && (
+          {false && type !== "none" && type !== "empty" && (
             <div className="te mt-[2rem] flex flex-col items-start gap-2 text-white">
               <Select value={selectedValue} onValueChange={handleValueChange}>
                 <SelectTrigger className="custom-select-trigger w-[180px] bg-black text-white">
