@@ -10,18 +10,23 @@ const Landing = () => {
           <span
             className={`${styles.animate_word} col-span-full row-span-full`}
           >
-            Subscription Funds
+            Payrolls
+          </span>
+          <span
+            className={`${styles.animate_word} col-span-full row-span-full`}
+          >
+            Payment Subscription
           </span>
           <span
             className={`${styles.animate_word_delay_1} col-span-full row-span-full`}
           >
             Automated Payments
           </span>
-          <span
+          {/* <span
             className={`${styles.animate_word_delay_2} col-span-full row-span-full`}
           >
             Tokenized Payments
-          </span>
+          </span> */}
           <span
             className={`${styles.animate_word_delay_3} col-span-full row-span-full`}
           >

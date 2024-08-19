@@ -14,7 +14,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Search />
           <p className="text-center text-sm leading-loose md:text-left">
-            Unlock Seamless Recurring Payments with Ease
+            Payrolls on Automated Payments on Stellar
           </p>
         </div>
         <ModeToggle />
