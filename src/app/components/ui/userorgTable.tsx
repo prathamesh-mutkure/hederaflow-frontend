@@ -34,6 +34,7 @@ import {
   TableRow,
   TableHeader,
 } from "@/components/ui/table";
+import axiosInstance from "@/app/utils/apis";
 
 export type Payment = {
   id: string;
@@ -91,15 +92,7 @@ export function OrganizationTable() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://auto-stellar-backend.onrender.com/user/orgs/list",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          },
-        );
+        const response = await axiosInstance.get("/user/orgs/list");
 
         const fetchedData = response.data.map((item: any) => ({
           id: item.organisation.id.toString(),

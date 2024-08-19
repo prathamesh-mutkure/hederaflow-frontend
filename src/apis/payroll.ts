@@ -13,9 +13,7 @@ export type OrgPayroll = {
 };
 
 export async function getOrgPayrolls(): Promise<OrgPayroll[]> {
-  const response = await axiosInstance.get(
-    `${process.env.NEXT_PUBLIC_SERVER}/payroll/org/list`,
-  );
+  const response = await axiosInstance.get(`/payroll/org/list`);
 
   const orgUsers = response.data as OrgPayroll[];
 

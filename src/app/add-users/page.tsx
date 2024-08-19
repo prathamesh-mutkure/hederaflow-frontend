@@ -37,9 +37,7 @@ const Page: React.FC = () => {
 
   const handleCheckClick = async () => {
     try {
-      const response = await axiosInstance.get(
-        `${process.env.NEXT_PUBLIC_SERVER}/user/email/${userEmail}`,
-      );
+      const response = await axiosInstance.get(`/user/email/${userEmail}`);
 
       const data = response.data as UserExistsResponse;
       setUserExistsData(data);

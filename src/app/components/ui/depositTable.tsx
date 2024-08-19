@@ -182,7 +182,7 @@ export function DataTable() {
     };
 
     void fetchData();
-  });
+  }, []);
 
   return (
     <div className="w-full">

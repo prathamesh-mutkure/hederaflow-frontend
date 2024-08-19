@@ -5,6 +5,7 @@ import axios from "axios";
 
 import Authentication from "../components/forms/Authentication";
 import Connect from "../components/ui/Connect";
+import axiosInstance from "../utils/apis";
 
 export default function AuthenticationPage() {
   const [stellarAccountId, setStellarAccountId] = useState<string>("");
@@ -13,15 +14,12 @@ export default function AuthenticationPage() {
   useEffect(() => {
     async function checkSignIn() {
       if (!stellarAccountId) return;
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER}/auth/user/signin`,
-        {
-          authType: "USER_SIGNIN",
-          stellarAccountId: stellarAccountId,
-          x: "x",
-          y: "y",
-        },
-      );
+      const response = await axiosInstance.post(`/auth/user/signin`, {
+        authType: "USER_SIGNIN",
+        stellarAccountId: stellarAccountId,
+        x: "x",
+        y: "y",
+      });
       console.log(response);
       localStorage.setItem("token", response.data.access_token);
       console.log(response);

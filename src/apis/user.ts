@@ -13,9 +13,7 @@ export type UserPayment = {
 };
 
 export async function getUserPayments(): Promise<UserPayment[]> {
-  const response = await axiosInstance.get(
-    `${process.env.NEXT_PUBLIC_SERVER}/payment/user/list`,
-  );
+  const response = await axiosInstance.get(`/payment/user/list`);
 
   const orgUsers = response.data as UserPayment[];
 

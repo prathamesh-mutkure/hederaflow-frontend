@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { SignInRequest, SignInResponse } from "@/app/utils/authapi";
 import Link from "next/navigation";
 import axios from "axios";
+import axiosInstance from "@/app/utils/apis";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -29,7 +30,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
   const signup = async (data: SignInRequest) => {
     try {
-      const response = await axios.post(`${API_URL}/auth/org/signin`, data);
+      const response = await axiosInstance.post(`/auth/org/signin`, data);
       console.log("Signup response:", response.data);
       const test = localStorage.setItem("token", response.data.access_token);
       console.log("org_token", test);

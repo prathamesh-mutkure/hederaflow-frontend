@@ -11,6 +11,7 @@ import { Input } from "@/app/components/ui/input";
 import { Label } from "@/app/components/ui/label";
 import ConnectButton from "./connect_wallet";
 import Connect from "./Connect";
+import axiosInstance from "@/app/utils/apis";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -44,10 +45,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
   async function signup(data: any) {
     try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER}/auth/user/signup`,
-        data,
-      );
+      const response = await axiosInstance.post(`/auth/user/signup`, data);
       console.log("Signup response:", response);
 
       const test = localStorage.setItem("token", response.data.access_token);
