@@ -46,7 +46,7 @@ const Page = () => {
       amount: string;
       token: string;
     }[]
-  >([{ id: null, amount: "", token: "XLM" }]);
+  >([{ id: null, amount: "", token: "HBAR" }]);
   const [orgUsers, setOrgUsers] = useState<OrgUser[]>([]);
 
   const handleAddClick = () => {
@@ -55,7 +55,7 @@ const Page = () => {
       {
         id: null,
         amount: "",
-        token: "XLM",
+        token: "HBAR",
       },
     ]);
   };
@@ -226,7 +226,7 @@ const Page = () => {
                     handleInputChange(index, "token", value)
                   }
                 >
-                  <DropdownMenuRadioItem value="XLM">XLM</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="HBAR">HBAR</DropdownMenuRadioItem>
                   <DropdownMenuRadioItem value="USDC">
                     USDC
                   </DropdownMenuRadioItem>

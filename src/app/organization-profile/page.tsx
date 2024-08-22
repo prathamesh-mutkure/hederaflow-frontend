@@ -9,7 +9,7 @@ const Page = () => {
   const [date, setDate] = React.useState<Date>();
 
   const [userInputs, setUserInputs] = useState([
-    { email: "", amount: "", token: "XLM" },
+    { email: "", amount: "", token: "HBAR" },
   ]);
 
   const handleAddClick = () => {
@@ -18,7 +18,7 @@ const Page = () => {
       {
         email: "",
         amount: "",
-        token: "XLM",
+        token: "HBAR",
       },
     ]);
   };

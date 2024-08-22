@@ -45,11 +45,11 @@ const FundModal = () => {
   const [userInputs, setUserInputs] = useState({
     email: "",
     amount: "",
-    token: "XLM",
+    token: "HBAR",
   });
 
   const currencies = [
-    { label: "XLM", value: "XLM" },
+    { label: "HBAR", value: "HBAR" },
     { label: "USDC", value: "USDC" },
     { label: "USDT", value: "USDT" },
   ];

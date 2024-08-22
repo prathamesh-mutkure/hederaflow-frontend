@@ -78,7 +78,7 @@ export const columns: ColumnDef<UserPayment>[] = [
       const amount = parseFloat(row.getValue("amount"));
       const formatted = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "XLM",
+        currency: "HBAR",
       }).format(amount);
       return <div className="text-right font-medium">{formatted}</div>;
     },
